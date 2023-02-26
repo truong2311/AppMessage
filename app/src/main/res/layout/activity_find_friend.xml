@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FindFriend"
+    >
+
+    <LinearLayout
+        android:id="@+id/lnsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:hint="@string/search"/>
+        <ImageButton
+            android:id="@+id/ibSearch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_search"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAAAAA"
+        android:layout_below="@+id/lnsearch"
+        android:orientation="horizontal" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvFindFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"/>
+</RelativeLayout>

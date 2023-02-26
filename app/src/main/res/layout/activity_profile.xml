@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity"
+    android:padding="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImageP"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/border_image"
+        android:src="@drawable/avatar"/>
+
+    <LinearLayout
+        android:id="@+id/ln1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserImageP"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/ivUserNameP"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/icon_usernamep"
+            android:contentDescription="@string/todo" />
+        <EditText
+            android:id="@+id/edtUserNameP"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:hint="@string/username"
+            android:layout_marginStart="10dp"
+            android:autofillHints=""
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ln1"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/ivDateofBirthP"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/icon_datep"
+            android:contentDescription="@string/todo" />
+            <EditText
+                android:id="@+id/edtDateofBirthP"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:hint="@string/date_of_birth"
+                android:layout_marginStart="10dp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:enabled="false"/>
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            android:text="@string/set"
+            android:layout_marginStart="10dp"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ln2"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/ivGenderP"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/icon_genderp"
+            android:contentDescription="@string/todo" />
+        <RadioGroup
+            android:id="@+id/grouprbtnGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp">
+            <RadioButton
+                android:id="@+id/rbtnMale"
+                android:text="@string/male"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/rbtnFemale"
+                android:text="@string/female"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ln3"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/ivAddressP"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/icon_addressp"
+            android:contentDescription="@string/todo" />
+        <EditText
+            android:id="@+id/edtAddressP"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:hint="@string/address"
+            android:layout_marginStart="10dp"
+            android:autofillHints=""
+            android:inputType="text" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnUpdateInformationP"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:text="@string/update_information"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ln4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
